@@ -12,8 +12,7 @@ const CategoryBox = () => {
   const deleteTaskCategory = (id) => {
     const updatedTasks = tasksData.filter(task => task.id !== id);
     setTasksData(updatedTasks);
-    setDotted1(false);
-    setDotted2(false);
+    setDottedTasks([]);
   }
 
   const deleteIndividualTask = (taskId, subTaskIndex) => {
