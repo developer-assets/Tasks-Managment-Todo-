@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -15,7 +15,7 @@ const Header = () => {
     },
     {
       id: 2,
-      link: 'tasks',
+      link: '/tasks',
       name: 'tasks'
     },
     {
@@ -41,7 +41,7 @@ const Header = () => {
         {links.map((link) => {
           return (
             <li key={link.id} className='px-4 cursor-pointer capitalize font-medium text-slate-500 hover:scale-105 duration-200'>
-              <a href={link.link}>{link.name}</a>
+              <Link to={link.link}> {link.name} </Link>
             </li>
           );
         })}
